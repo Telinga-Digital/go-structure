@@ -1,5 +1,4 @@
 ## Go Structure
----
 
 This repository is created a reference of golang project structure.
 
