@@ -1,0 +1,15 @@
+{
+  "name": "go-structure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/endrureza/go-structure.git",
+  "author": "Endru Reza <lotusb13@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "artisan": "go run cli/main.go",
+    "dev": "nodemon --exec go run main.go --signal SIGTERM"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
