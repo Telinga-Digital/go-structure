@@ -16,39 +16,39 @@ This repository is created a reference of golang project structure.
 
 ### Application Structure
 
-#### App
+#### `/app`
 
 All API logic, model relation and middleware should go to this folder
 
-#### Cli
+#### `/cli`
 
 Any command line script should go to this folder
 
-#### Config
+#### `/config`
 
 All configuration regarding application should go to this folder
 
-#### Routes
+#### `/routes`
 
 All endpoint or routing should go to this folder
 
-#### Services
+#### `/services`
 
 All third party services configuration or setting should go to this folder
 
-#### Tests
+#### `/tests`
 
 All test mechanism should go to this folder
 
-#### Utils
+#### `/utils`
 
 All imported library that is not exposed to outside of package should go to this folder
 
-#### Main.go
+#### `main.go`
 
 This file will be the main to execute / run application
 
-#### Apidoc.json
+#### `apidoc.json`
 
 All route documentation should go to this file
 
