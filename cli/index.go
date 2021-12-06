@@ -4,7 +4,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/endrureza/go-structure/cli/version"
+	"github.com/Telinga-Digital/go-structure/cli/migrate"
+	"github.com/Telinga-Digital/go-structure/cli/version"
 	"github.com/urfave/cli/v2"
 )
 
@@ -14,6 +15,7 @@ func main() {
 		Usage: "Command line list of application",
 		Commands: []*cli.Command{
 			&version.Cmd,
+			&migrate.Cmd,
 		},
 	}
 

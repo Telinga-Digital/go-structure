@@ -1,25 +1,22 @@
 package main
 
 import (
-	"github.com/endrureza/go-structure/config"
-	"github.com/endrureza/go-structure/routes"
-	"github.com/fvbock/endless"
+	"github.com/Telinga-Digital/go-structure/app/models"
+	"github.com/Telinga-Digital/go-structure/config"
+	routes "github.com/Telinga-Digital/go-structure/routes/v1"
 	"github.com/gin-gonic/gin"
 )
 
 var (
-	router *gin.Engine
-	Port   = config.GetAppConfig().Port
+	Port = config.GetAppConfig().Port
 )
 
 func main() {
 	router := gin.Default()
 
-	routes.GetRoutes(router)
+	models.MakeConnection()
 
-	if Port == "" {
-		endless.ListenAndServe(":8080", router)
-	} else {
-		endless.ListenAndServe(":"+Port, router)
-	}
+	routes.GetAllRoutes(router)
+
+	router.Run(":" + Port)
 }

@@ -8,12 +8,12 @@ import (
 )
 
 type DBConfig struct {
-	Connection string
-	Host       string
-	Port       string
-	Database   string
-	Username   string
-	Password   string
+	Connection string `default:"mysql"`
+	Host       string `default:"127.0.0.1"`
+	Port       string `default:"3306"`
+	Database   string `default:"go-structure"`
+	Username   string `default:"root"`
+	Password   string `default:""`
 }
 
 func init() {
