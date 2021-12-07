@@ -32,7 +32,7 @@ func MakeConnection() {
 }
 
 func connectToMySQL() (*gorm.DB, error) {
-	sqlDB, _ := sql.Open("mysql", fmt.Sprintf("%s%s@tcp(%s:%s)/%s", user, ":"+pass, host, port, data))
+	sqlDB, _ := sql.Open("mysql", fmt.Sprintf("%s%s@tcp(%s:%s)/%s?parseTime=true", user, ":"+pass, host, port, data))
 
 	return gorm.Open(mysql.New(mysql.Config{
 		Conn: sqlDB,
@@ -40,7 +40,7 @@ func connectToMySQL() (*gorm.DB, error) {
 }
 
 func connectToPostgres() (*gorm.DB, error) {
-	sqlDB, _ := sql.Open("postgres", fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", user, pass, host, port, data))
+	sqlDB, _ := sql.Open("postgres", fmt.Sprintf("postgres://%s:%s@%s:%s/%s?parseTime=true&sslmode=disable", user, pass, host, port, data))
 
 	return gorm.Open(postgres.New(postgres.Config{
 		Conn: sqlDB,
