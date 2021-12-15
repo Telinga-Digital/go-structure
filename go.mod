@@ -5,6 +5,7 @@ go 1.16
 require (
 	github.com/bxcodec/faker/v3 v3.6.0
 	github.com/gin-gonic/gin v1.7.4
+	github.com/go-redis/redis/v8 v8.11.4
 	github.com/golang-migrate/migrate/v4 v4.15.1
 	github.com/joho/godotenv v1.4.0
 	github.com/urfave/cli/v2 v2.3.0

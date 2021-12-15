@@ -13,5 +13,7 @@ func GetAllRoutes(router *gin.Engine) {
 		v1.GET("/", hello.Index)
 
 		v1.GET("/user", middlewares.Authenticate(), user.Show)
+
+		v1.POST("/user/broadcast", middlewares.Authenticate(), user.Broadcast)
 	}
 }
